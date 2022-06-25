@@ -29,8 +29,8 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ```
-$ git clone https://github.com/CharlesSin/seo-template.git
-$ cd seo-template
+$ git clone https://github.com/CharlesSin/Notes.git
+$ cd Notes
 $ npm install
 $ npm start
 ```
