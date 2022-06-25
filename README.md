@@ -37,3 +37,6 @@ $ cd Notes
 $ npm install
 $ npm run dev
 ```
+
+## Screenshot
+![alt text](https://github.com/CharlesSin/Notes/blob/main/public/screenshot.jpg)
