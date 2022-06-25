@@ -1,6 +1,6 @@
 ## Table of contents
 
-- [Demo](#project example)
+- [Demo](#project-url)
 - [General info](#general-info)
 - [Technologies](#technologies)
 - [Setup](#setup)
