@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="og:image"
           property="og:image"
-          content="https://charles-favorite.vercel.app/"
+          content="https://charles-favorite.vercel.app/screenshot.jpg"
         />
 
         <meta

@@ -48,7 +48,7 @@ export default function Home(props) {
 
   return (
     <main className={styles.main} role="main">
-      <h1 className={styles.heading}>Charles Favorite List</h1>
+      <h1 className={styles.heading}>Charles Tech Notes</h1>
       <article
         className={styles.container}
         itemScope

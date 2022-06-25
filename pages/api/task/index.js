@@ -37,7 +37,8 @@ export default async (req, res) => {
   if (method === "GET") {
     try {
       const bookmarkList = await Bookmark.find();
-      res.status(200).json({ data: bookmarkList });
+
+      res.status(200).json({ data: bookmarkList.reverse() });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" });
       console.log(error);
