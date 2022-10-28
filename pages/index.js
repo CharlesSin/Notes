@@ -3,7 +3,9 @@ import axios from "axios";
 import styles from "../styles/Home.module.css";
 import * as ga from "../utils/ga";
 
-const url = "{deploy_server_url}/api/task";
+let deploy_server_url = "http://localhost:3000";
+
+const url = `${deploy_server_url}/api/task`;
 
 export default function Home(props) {
   const [bookmarkLists, setBookmarkLists] = useState(props.link);

@@ -1,6 +1,5 @@
 import Bookmark from "../../../models/Bookmark";
 import dbConnect from "../../../utils/dbConnect";
-
 import fetchData from "../../../utils/fetchHtml";
 
 export default async (req, res) => {
@@ -36,7 +35,7 @@ export default async (req, res) => {
 
   if (method === "GET") {
     try {
-      const bookmarkList = await Bookmark.find();
+      const bookmarkList = await Bookmark.find({}).limit(10).exec();
 
       res.status(200).json({ data: bookmarkList.reverse() });
     } catch (error) {

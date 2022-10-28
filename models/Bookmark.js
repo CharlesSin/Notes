@@ -5,6 +5,7 @@ const bookmarkSchema = new mongoose.Schema({
   title: { type: String, default: "Title string" },
   desc: { type: String, default: "Description string" },
   domain: { type: String, default: "example.com" },
+  createdAt: { type: Date, default: Date.now },
 });
 
 export default mongoose.model("bookmark", bookmarkSchema);
