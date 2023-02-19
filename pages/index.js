@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "../styles/Home.module.css";
 import * as ga from "../utils/ga";
 
-let deploy_server_url = process.env.ENV == "dev" ? process.env.DEV_URL : process.env.PROD_URL;
+const deploy_server_url = "https://charles-favorite.vercel.app";
 
 const url = `${deploy_server_url}/api/task`;
 
