@@ -8,4 +8,4 @@ const bookmarkSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.model("bookmark", bookmarkSchema);
+export default mongoose.models.Customer || mongoose.model("bookmark", bookmarkSchema);

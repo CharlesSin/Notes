@@ -16,9 +16,7 @@ export default function Home(props) {
   }, []);
 
   const handleChange = ({ currentTarget: input }) => {
-    input.value === ""
-      ? setBookmark({ bookmark: "" })
-      : setBookmark((prev) => ({ ...prev, bookmark: input.value }));
+    input.value === "" ? setBookmark({ bookmark: "" }) : setBookmark((prev) => ({ ...prev, bookmark: input.value }));
   };
 
   const addTask = async (e) => {
@@ -49,43 +47,23 @@ export default function Home(props) {
   };
 
   return (
-    <main className={styles.main} role="main">
-      <h1 className={styles.heading}>Charles Tech Notes</h1>
-      <article
-        className={styles.container}
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+    <main className={styles.container_fuild} role="main">
+      <h1 className={styles.title}>Charles Tech Notes</h1>
+      <article className={styles.content} itemScope itemType="http://schema.org/Article">
         <form onSubmit={addTask} className={styles.form_container}>
-          <input
-            className={styles.input}
-            type="text"
-            placeholder="Link"
-            onChange={handleChange}
-            value={bookmark.bookmark}
-          />
+          <input className={styles.input} type="text" placeholder="Link" onChange={handleChange} value={bookmark.bookmark} />
           <button type="submit" className={styles.submit_btn}>
             Add
           </button>
         </form>
         <section className={styles.bookmark_list} itemProp="articleBody">
           {bookmarkLists.map((item) => (
-            <a
-              className={styles.bookmark_list_container}
-              href={item.link}
-              key={item._id}
-              title={item.title}
-              target="_blank"
-              rel="noreferrer"
-              onClick={(e) => handleClick(item)}
-            >
+            <a className={styles.bookmark_list_container} href={item.link} key={item._id} title={item.title} target="_blank" rel="noreferrer" onClick={(e) => handleClick(item)}>
               <h2 className={styles.bookmark_text}>{item.title}</h2>
-              <h3 className={styles.bookmark_text}>{item.desc}</h3>
+              <h4 className={styles.bookmark_text}>{item.desc}</h4>
             </a>
           ))}
-          {bookmarkLists.length === 0 && (
-            <h2 className={styles.no_bookmark}>No Favorites</h2>
-          )}
+          {bookmarkLists.length === 0 && <h2 className={styles.no_bookmark}>No Favorites</h2>}
         </section>
       </article>
     </main>
