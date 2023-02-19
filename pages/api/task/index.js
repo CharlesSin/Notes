@@ -24,9 +24,7 @@ export default async (req, res) => {
         domain,
       }).save();
 
-      res
-        .status(201)
-        .json({ data: saveLink, message: "Bookmark added successfully" });
+      res.status(201).json({ data: saveLink, message: "Bookmark added successfully" });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" });
       console.log(error);
@@ -35,9 +33,9 @@ export default async (req, res) => {
 
   if (method === "GET") {
     try {
-      const bookmarkList = await Bookmark.find({}).limit(10).exec();
+      const bookmarkList = await Bookmark.find({}).sort({ createdAt: -1 }).limit(50).exec();
 
-      res.status(200).json({ data: bookmarkList.reverse() });
+      res.status(200).json({ data: bookmarkList });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" });
       console.log(error);
