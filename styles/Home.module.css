@@ -128,6 +128,16 @@
     margin: 0 10px;
   }
 
+  .input {
+    font-size: 0.5rem;
+    padding: 4px;
+  }
+
+  .submit_btn {
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+
   .bookmark_list {
     height: calc(100vh - 100px);
   }
