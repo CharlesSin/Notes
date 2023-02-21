@@ -22,6 +22,8 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="google-site-verification" content="eP82dEE--Mtf-ypVN9QO-B9kd-C5uLVNT_Ce_bdha24" />
 
+        <meta name="robots" content="all" />
+
         <link rel="canonical" href="https://charles-favorite.vercel.app" />
       </Head>
       <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
